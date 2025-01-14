@@ -67,7 +67,7 @@ To route the audio to your new virtual audio cable, start PulseAudio Volume Cont
 
 To listen on the speakes, set the loopback feed to your speakers.
 
-![pavucontrol](https://www.mongstad.dev/images/VolumeControl.png)
+![pavucontrol](images/volumecontrol.png)
 
 
 Hope this quick guide was to any help :) 

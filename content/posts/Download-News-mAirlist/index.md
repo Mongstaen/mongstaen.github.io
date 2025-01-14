@@ -23,7 +23,7 @@ begin
 end.    
 ```
 Just add this to your mAirlist event edior :)  
-![eventeditor](https://www.mongstad.dev/images/event-editor-news.png)  
+![eventeditor](images/event-editor.png)  
 
 Feel free to send me a chat at @mongstad:matrix.org if you have any questions or feedback!  
 [Maybe buy me a coffee?](https://www.buymeacoffee.com/mongstad) 
