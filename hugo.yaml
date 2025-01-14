@@ -1,4 +1,4 @@
-baseURL: https://example.org/
+baseURL: https://mongstaen.github.io/blog/
 languageCode: en-us
 title: Thomas Mongstad
 theme: ["PaperMod"]
@@ -45,11 +45,10 @@ params:
   hideFooter: false
   ShowWordCounts: true
   VisitCount: true
-  ShowLastMod: true #显示文章更新时间
+  ShowLastMod: true 
+  ShowToc: true 
+  TocOpen: true 
 
-  ShowToc: true # 显示目录
-  TocOpen: true # 自动展开目录
-
-  extendCodeBackground: false # 代码块是否自动横向展开
+  extendCodeBackground: false 
 
   comments: true

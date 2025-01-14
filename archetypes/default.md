@@ -9,7 +9,7 @@ categories:
 - 
 tags:
 - 
-summary:
+summary: ""
 description: ""
 weight:
 slug: ""
@@ -18,6 +18,10 @@ comments: false
 hidemeta: false
 disableShare: true
 showbreadcrumbs: false
+
+ShowTOC: false
+TocOpen: false 
+
 cover:
     image: "" 
     zoom: 
