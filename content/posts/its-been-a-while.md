@@ -12,7 +12,7 @@ tags:
 - Setup
 summary: "Just a brief note on packages on my Mac.."
 description: ""
-weight:
+weight: 
 slug: ""
 draft: false
 comments: false

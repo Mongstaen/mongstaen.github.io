@@ -33,23 +33,42 @@ menu:
 
 params:
   env: production
+  title: Thomas Mongstad- Blog
   description:
   author: 
   defaultTheme: dark
   disableThemeToggle: true
-  ShowShareButtons: false
   ShowReadingTime: false
-  displayFullLangName: false
-  ShowPostNavLinks: false
+  ShowShareButtons: true
+  ShowPostNavLinks: true
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  hideFooter: false
-  ShowWordCounts: true
-  VisitCount: true
-  ShowLastMod: true 
-  ShowToc: true 
-  TocOpen: true 
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
 
   extendCodeBackground: false 
+  
+  profileMode:
+    enabled: false 
+    title: 
+    subtitle: 
+    imageUrl: 
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: 
+    buttons:
+      - name: Blog
+        url: archives
+      - name: Tags
+        url: tags
 
-  comments: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
