@@ -1,7 +1,6 @@
 ---
 title: "Yamaha MW12CX Faderstart"
-date: 2025-01-14T11:14:15+01:00
-lastmod: 2025-01-14T11:14:15+01:00
+date: 2022-02-10
 author: ["Thomas Mongstad"]
 keywords: 
 - 
