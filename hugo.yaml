@@ -51,4 +51,5 @@ params:
 
   extendCodeBackground: false 
 
-  comments: true
+
+canonifyURLs: true
