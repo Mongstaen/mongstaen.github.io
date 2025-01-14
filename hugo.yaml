@@ -1,8 +1,9 @@
-baseURL: mongstaen.github.io
+baseURL: https://example.org/
 languageCode: en-us
 title: Thomas Mongstad
 theme: ["PaperMod"]
 
+canonifyURLs: true
 enableInlineShortcodes: true
 enableEmoji: true
 enableRobotsTXT: true
@@ -51,5 +52,4 @@ params:
 
   extendCodeBackground: false 
 
-
-canonifyURLs: true
+  comments: true

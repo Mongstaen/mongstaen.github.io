@@ -56,7 +56,7 @@ For two of the faders, I've programmed the Raspberry Pi Pico to trigger a relay,
 Not much to say, but one of these for [aliexpress](https://www.aliexpress.com/item/32857386584.html?spm=a2g0o.order_list.0.0.21ef1802OIoa3v) also supported the 3.3V power of the Pico.
 
 ![relay](https://ae01.alicdn.com/kf/HTB1L6yKevWG3KVjSZPcq6zkbXXaL/3-3V-2-Channel-Relay-Module-Optocoupler-Isolation-Module-Relay-Control-Board.jpg_Q90.jpg_.webp)
-![relay1](images/relay.png)
+![relay1](static/images/relay.png)
 
 ```pascal
 for i in range(len(mic_faders)):
