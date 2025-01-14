@@ -39,7 +39,7 @@ params:
   defaultTheme: dark
   disableThemeToggle: true
   ShowReadingTime: false
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
