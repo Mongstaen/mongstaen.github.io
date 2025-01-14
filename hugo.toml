@@ -1,3 +1,21 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Thomas Mongstad'
+theme = 'PaperMod'
+
+enableInlineShortcodes = true
+enableEmoji = true
+enableRobotsTXT = true
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+pagination.paperSize = 15
+summaryLength = 70
+
+# Permalinks?
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
