@@ -1,0 +1,55 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Thomas Mongstad
+theme: ["PaperMod"]
+
+enableInlineShortcodes: true
+enableEmoji: true
+enableRobotsTXT: true
+enableGitInfo: true
+
+buildDrafts: false
+buildExpired: false
+buildFuture: false
+
+pagination.paperSize: 15
+summaryLength: 50
+
+permalinks:
+  post: "/:year/:title/"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: about
+    - identifier: posts
+      name: Posts
+      url: posts
+    - identifier: tags
+      name: Tags
+      url: tags
+
+params:
+  env: production
+  description:
+  author: 
+  defaultTheme: dark
+  disableThemeToggle: true
+  ShowShareButtons: false
+  ShowReadingTime: false
+  displayFullLangName: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  hideFooter: false
+  ShowWordCounts: true
+  VisitCount: true
+  ShowLastMod: true #显示文章更新时间
+
+  ShowToc: true # 显示目录
+  TocOpen: true # 自动展开目录
+
+  extendCodeBackground: false # 代码块是否自动横向展开
+
+  comments: true
