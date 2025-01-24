@@ -10,8 +10,8 @@ categories:
 - mAirlist
 tags:
 - mAirlist
-summary: "Short script on how to change the audio output with a script.."
-description: "Short script on how to change the audio output with a script.."
+summary: "Short script that changes the audio output"
+description: "Short script that changes the audio output"
 weight:
 slug: ""
 draft: false
