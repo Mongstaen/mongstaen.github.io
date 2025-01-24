@@ -1,7 +1,7 @@
 ---
 title: "Change Audio output in mAirlist with a script"
-date: 2025-01-24T21:08:17+01:00
-lastmod: 2025-01-24T21:08:17+01:00
+date: 2025-01-23T21:08:17+01:00
+lastmod: 2025-01-23T21:08:17+01:00
 author: ["Thomas Mongstad"]
 keywords: 
 - mAirlist
