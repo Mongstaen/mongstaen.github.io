@@ -37,7 +37,7 @@ Still a work in progress.
 ## Installed via Homebrew
 - Rectangle
 - Stats
-- BetterDisplay
+- ~~ BetterDisplay ~~
 - Alt-Tab
 - Hiddenbar
 - 1Password
