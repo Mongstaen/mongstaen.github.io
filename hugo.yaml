@@ -30,6 +30,9 @@ menu:
     - identifier: tags
       name: Tags
       url: tags
+    - identifier: gist
+      name: Gist
+      url: https://gist.mongst.ad/thomas
 
 params:
   env: production
