@@ -65,5 +65,3 @@ begin
   end;
 end;
 ```
-
-{{ <script src="https://gist.mongst.ad/thomas/aead2876944549358272679cf2bdb244.js"></script> }}
