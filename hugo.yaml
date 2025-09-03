@@ -58,8 +58,10 @@ params:
   
   profileMode:
     enabled: false 
-    title: 
-    subtitle: 
+    title: Test
+    subtitle: |
+      Building solutions through code, one project at a time. Here you'll find thoughts on software development, technical deep-dives, and lessons learned from the trenches.
+      Whether you're debugging at 2 AM or architecting your next big idea, let's explore the craft of development together.Happy coding!
     imageUrl: 
     imageWidth: 120
     imageHeight: 120
