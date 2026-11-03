@@ -17,7 +17,7 @@ This is the personal business site of Thomas Mongstad. It says who he is, what t
 Consulting and programming from a person with hands-on depth in radio and broadcast automation, built on general web and IT work. Landscaping is a small side service and gets only a brief mention.
 
 ## Operating Context
-- Built with Astro (the Hugo setup is being retired and is not a reference) and hosted on GitHub Pages at mongstaen.github.io.
+- Built with Astro (the Hugo setup is being retired and is not a reference) and hosted on GitHub Pages at mongstad.dev (the repo is mongstaen.github.io).
 - Bilingual: Norwegian (nb) is primary at `/` and English (en) is secondary at `/en/`.
 - The landing page plan is tracked in GitHub issue #3.
 
