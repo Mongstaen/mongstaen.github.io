@@ -3,7 +3,7 @@ title: "Downloading from FTP with a script"
 date: "2022-03-25"
 author: "Thomas Mongstad"
 description: "Script for downloading files from FTP?"
-tags: ["mAirlist","Script"]
+tags: ["mAirlist","Scripting"]
 draft: false
 --- 
 Our newsprovider are uploading every hour to their FTP server for us to download and use.  

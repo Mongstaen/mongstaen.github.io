@@ -7,7 +7,7 @@ keywords:
 categories:
 - 
 tags:
-- ubuntu
+- Ubuntu
 summary: "A quick guide on how to set up virtual audio cables in linux"
 description: "A quick guide on how to set up virtual audio cables in linux"
 weight:

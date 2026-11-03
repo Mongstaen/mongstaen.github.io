@@ -8,7 +8,7 @@ categories:
 - 
 tags:
 - Mods
-- Radio Broadcasting
+- Radio
 - Mixer
 summary: "Bought a new - used - mixer for my personal radio studio... And made a mess!"
 description: "Bought a new - used - mixer for my personal radio studio... And made a mess!"

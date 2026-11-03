@@ -3,7 +3,7 @@ title: "Radio Studio Monitor"
 date: "2021-10-24"
 author: "Thomas Mongstad"
 description: "This small app is intended for use on LAN, hence the low - to non existing - security features..."
-tags: ["NodeJS","Radio Broadcasting"]
+tags: ["NodeJS","Radio"]
 draft: false
 ---
 

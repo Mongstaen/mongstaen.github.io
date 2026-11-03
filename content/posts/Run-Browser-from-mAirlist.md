@@ -3,7 +3,7 @@ title: "Open Browser from mAirlist"
 date: "2023-10-01"
 author: "Thomas Mongstad"
 description: "Maybe you need to open a spesific web-page at a spesific time?"
-tags: ["mAirlist","scripting"]
+tags: ["mAirlist","Scripting"]
 draft: false
 ---
 
