@@ -366,3 +366,7 @@ $RECYCLE.BIN/
 
 bak.hugo.toml
 archetypes/default copy.md
+# Astro
+node_modules/
+dist/
+.astro/
