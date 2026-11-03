@@ -1,0 +1,19 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+import { latestPosts, postUrl, dateFormat } from '../lib/posts';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const posts = await latestPosts();
+const fmt = dateFormat(lang);
+---
+<h1>{t('blog.title')}</h1>
+<p class="lede-sm">{t('blog.intro')}</p>
+<ul class="posts">
+  {posts.map((p) => (
+    <li>
+      <a href={postUrl(p)} hreflang={p.data.lang} lang={p.data.lang !== lang ? p.data.lang : undefined}>{p.data.title}</a>
+      <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time>
+    </li>
+  ))}
+</ul>

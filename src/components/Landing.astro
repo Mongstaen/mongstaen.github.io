@@ -1,14 +1,12 @@
 ---
-import { getCollection } from 'astro:content';
 import { localizePath, useTranslations, type Lang } from '../i18n/ui';
+import { postUrl, latestPosts } from '../lib/posts';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const email = 'thomas@mongstad.dev';
 
-const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
+const posts = (await latestPosts()).slice(0, 3);
 
 const fmt = new Intl.DateTimeFormat(lang === 'nb' ? 'nb-NO' : 'en-GB', {
   day: 'numeric', month: 'short', year: 'numeric',
@@ -32,7 +30,6 @@ const fmt = new Intl.DateTimeFormat(lang === 'nb' ? 'nb-NO' : 'en-GB', {
       <dd>{t('home.work.web.d')}</dd>
     </div>
   </dl>
-  <p class="aside">{t('home.work.garden')}</p>
 </section>
 
 {posts.length > 0 && (
@@ -41,7 +38,7 @@ const fmt = new Intl.DateTimeFormat(lang === 'nb' ? 'nb-NO' : 'en-GB', {
     <ul class="posts">
       {posts.map((p) => (
         <li>
-          <a href={localizePath(`/blog/${p.id}/`, lang)} hreflang={p.data.lang} lang={p.data.lang !== lang ? p.data.lang : undefined}>
+          <a href={postUrl(p)} hreflang={p.data.lang} lang={p.data.lang !== lang ? p.data.lang : undefined}>
             {p.data.title}
           </a>
           <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time>

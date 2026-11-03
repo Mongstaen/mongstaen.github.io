@@ -1,0 +1,10 @@
+---
+import PostPage from '../../components/PostPage.astro';
+import { latestPosts, legacySlug } from '../../lib/posts';
+export async function getStaticPaths() {
+  return (await latestPosts())
+    .filter((p) => p.data.lang === 'nb')
+    .map((post) => ({ params: { slug: legacySlug(post) }, props: { post } }));
+}
+---
+<PostPage post={Astro.props.post} />

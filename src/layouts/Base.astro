@@ -3,8 +3,8 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { localizePath, stripLang, useTranslations, type Lang } from '../i18n/ui';
-interface Props { lang: Lang; title?: string; description?: string }
-const { lang, title, description } = Astro.props;
+interface Props { lang: Lang; title?: string; description?: string; altHref?: string }
+const { lang, title, description, altHref } = Astro.props;
 const t = useTranslations(lang);
 const base = stripLang(Astro.url.pathname);
 const pageTitle = title ? `${title} · Thomas Mongstad` : 'Thomas Mongstad';
@@ -17,11 +17,12 @@ const pageTitle = title ? `${title} · Thomas Mongstad` : 'Thomas Mongstad';
     <title>{pageTitle}</title>
     <meta name="description" content={description ?? t('site.description')} />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
-    <link rel="alternate" hreflang="nb" href={new URL(localizePath(base, 'nb'), Astro.site)} />
-    <link rel="alternate" hreflang="en" href={new URL(localizePath(base, 'en'), Astro.site)} />
+    {!altHref && <link rel="alternate" hreflang="nb" href={new URL(localizePath(base, 'nb'), Astro.site)} />}
+    {!altHref && <link rel="alternate" hreflang="en" href={new URL(localizePath(base, 'en'), Astro.site)} />}
+    <script is:inline defer src="https://stats.vps.papa.party/script.js" data-website-id="d7efd2d5-b770-4970-93c3-6deefc4732c7"></script>
   </head>
   <body>
-    <Header lang={lang} />
+    <Header lang={lang} altHref={altHref} />
     <main class="wrap"><slot /></main>
     <Footer lang={lang} />
   </body>

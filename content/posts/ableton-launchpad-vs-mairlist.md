@@ -43,7 +43,7 @@ if (Data1 = 0) and (Data2 = 127) then
     end
 ```
 
-{{< youtube BHzI3VjI2l8 >}}
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/BHzI3VjI2l8" title="YouTube video" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
 
 ``` js
 Data1 = ID of button.

@@ -1,0 +1,11 @@
+---
+// Redirects old Hugo URLs (/:year/:title/) to the new post pages.
+import { latestPosts, legacySlug, postUrl } from '../../lib/posts';
+export async function getStaticPaths() {
+  return (await latestPosts()).map((post) => ({
+    params: { year: String(post.data.date.getFullYear()), slug: legacySlug(post) },
+    props: { to: postUrl(post) },
+  }));
+}
+return Astro.redirect(Astro.props.to, 301);
+---

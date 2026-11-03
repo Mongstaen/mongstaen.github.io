@@ -80,7 +80,7 @@ Actually, yes. I'm quite happy with this setup now. :)
 The project was actually quite fun, and the mixer is still working properly.  
 I'll be honest and say that it's a hot mess of wires inside the mixer :) .. Whatever works, right?
 
-{{< youtube Ja2IeAiC7rs >}}  
-{{< youtube aOU86YsR4TU >}}  
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Ja2IeAiC7rs" title="YouTube video" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/aOU86YsR4TU" title="YouTube video" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
 Feel free to send me a chat at @mongstad:matrix.org if you have any questions or feedback!  
 [Maybe buy me a coffee?](https://www.buymeacoffee.com/mongstad)

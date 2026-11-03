@@ -5,6 +5,7 @@
   --rule: oklch(0.9 0.005 250);
   --accent: oklch(0.5 0.13 250);
   --select: oklch(0.88 0.06 250);
+  --code-bg: oklch(0.965 0.004 250);
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --rule: oklch(0.3 0.008 250);
     --accent: oklch(0.78 0.1 250);
     --select: oklch(0.38 0.07 250);
+    --code-bg: oklch(0.22 0.007 250);
   }
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -60,4 +62,33 @@ p { margin: 0 0 1rem; text-wrap: pretty; }
 .posts time { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 @media (max-width: 30rem) {
   .posts li { flex-direction: column; gap: .15rem; }
+}
+
+.lede-sm { color: var(--muted); margin-bottom: 2rem; }
+.back { margin-top: 3rem; }
+
+/* Post */
+.post > header { margin-bottom: 2.5rem; }
+.post > header h1 { margin-bottom: .5rem; }
+.post > header time { color: var(--muted); font-size: .875rem; }
+.prose { overflow-wrap: break-word; }
+.prose h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; letter-spacing: -.01em; }
+.prose h3 { font-size: 1.0625rem; margin: 2rem 0 .5rem; }
+.prose ul, .prose ol { padding-left: 1.25rem; margin: 0 0 1rem; }
+.prose li + li { margin-top: .25rem; }
+.prose img { max-width: 100%; height: auto; border-radius: 4px; margin: .5rem 0; }
+.prose blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 1px solid var(--rule); color: var(--muted); }
+.prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+.prose :not(pre) > code { font: .875em ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--code-bg); padding: .1em .35em; border-radius: 3px; }
+.prose pre { font: .8125rem/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 1rem 1.125rem; border-radius: 6px; overflow-x: auto; margin: 1.25rem 0; border: 1px solid var(--rule); }
+.prose table { border-collapse: collapse; width: 100%; font-size: .9375rem; display: block; overflow-x: auto; }
+.prose th, .prose td { text-align: left; padding: .4rem .75rem .4rem 0; border-bottom: 1px solid var(--rule); }
+.prose .video { position: relative; aspect-ratio: 16 / 9; margin: 1.5rem 0; }
+.prose .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 6px; }
+
+/* Shiki dual theme */
+.astro-code { background-color: var(--code-bg) !important; }
+@media (prefers-color-scheme: dark) {
+  .astro-code, .astro-code span { color: var(--shiki-dark) !important; background-color: transparent; }
+  .astro-code { background-color: var(--code-bg) !important; }
 }
