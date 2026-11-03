@@ -1,0 +1,27 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { localizePath, stripLang, useTranslations, type Lang } from '../i18n/ui';
+interface Props { lang: Lang; title?: string; description?: string }
+const { lang, title, description } = Astro.props;
+const t = useTranslations(lang);
+const base = stripLang(Astro.url.pathname);
+const pageTitle = title ? `${title} · Thomas Mongstad` : 'Thomas Mongstad';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? t('site.description')} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="alternate" hreflang="nb" href={new URL(localizePath(base, 'nb'), Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(localizePath(base, 'en'), Astro.site)} />
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main><slot /></main>
+    <Footer lang={lang} />
+  </body>
+</html>

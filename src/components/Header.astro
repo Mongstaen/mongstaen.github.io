@@ -1,0 +1,16 @@
+---
+import { languages, localizePath, stripLang, useTranslations, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const base = stripLang(Astro.url.pathname);
+const other: Lang = lang === 'nb' ? 'en' : 'nb';
+---
+<header>
+  <a href={localizePath('/', lang)} class="name">Thomas Mongstad</a>
+  <nav aria-label="Main">
+    <a href={localizePath('/about/', lang)}>{t('nav.about')}</a>
+    <a href={localizePath('/blog/', lang)}>{t('nav.blog')}</a>
+    <a href={localizePath(base, other)} hreflang={other} lang={other}>{languages[other]}</a>
+  </nav>
+</header>
