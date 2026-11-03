@@ -92,3 +92,4 @@ p { margin: 0 0 1rem; text-wrap: pretty; }
   .astro-code, .astro-code span { color: var(--shiki-dark) !important; background-color: transparent; }
   .astro-code { background-color: var(--code-bg) !important; }
 }
+.prose > h1 { margin-bottom: 1.5rem; }
