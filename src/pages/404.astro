@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { useTranslations } from '../i18n/ui';
+// GitHub Pages serves one 404 for every path, so show both languages.
+const nb = useTranslations('nb');
+const en = useTranslations('en');
+---
+<Base lang="nb" title={nb('404.title')} noindex>
+  <h1>{nb('404.title')}</h1>
+  <p>{nb('404.body')}</p>
+  <p><a href="/">{nb('404.home')}</a> · <a href="/blog/">{nb('404.blog')}</a></p>
+  <div lang="en" class="aside-block">
+    <h2>{en('404.title')}</h2>
+    <p>{en('404.body')}</p>
+    <p><a href="/en/">{en('404.home')}</a> · <a href="/en/blog/">{en('404.blog')}</a></p>
+  </div>
+</Base>

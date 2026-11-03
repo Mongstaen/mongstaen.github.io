@@ -1,0 +1,26 @@
+---
+const data = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://mongstad.dev/#person',
+      name: 'Thomas Mongstad',
+      url: 'https://mongstad.dev/',
+      email: 'mailto:thomas@mongstad.dev',
+      knowsAbout: ['Radio broadcast automation', 'mAirlist', 'Web development', 'IT'],
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://mongstad.dev/#org',
+      name: 'Thomas Mongstad',
+      url: 'https://mongstad.dev/',
+      email: 'thomas@mongstad.dev',
+      founder: { '@id': 'https://mongstad.dev/#person' },
+      identifier: { '@type': 'PropertyValue', propertyID: 'NO-ORGNR', value: '933366197' },
+      sameAs: ['https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=933366197'],
+    },
+  ],
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

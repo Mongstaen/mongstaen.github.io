@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mongstad.dev/sitemap-index.xml

@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Landing from '../../components/Landing.astro';
+import PersonJsonLd from "../../components/PersonJsonLd.astro";
 ---
 <Base lang="en">
+  <PersonJsonLd slot="head" />
   <Landing lang="en" />
 </Base>
