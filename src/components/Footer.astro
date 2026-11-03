@@ -3,6 +3,6 @@ import { useTranslations, type Lang } from '../i18n/ui';
 interface Props { lang: Lang }
 const t = useTranslations(Astro.props.lang);
 ---
-<footer>
+<footer class="wrap">
   <p>Thomas Mongstad · {t('footer.org')} <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=933366197">933 366 197</a></p>
 </footer>

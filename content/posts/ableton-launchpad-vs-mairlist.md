@@ -11,8 +11,7 @@ categories:
 - mAirlist
 tags:
 - mAirlist
-summary: "This script makes your Launchpad MIDIcontroller interact with mAirlist.. Inspired by Thomas Kloppholzs' Launchpad Script. 
-Changed for our current need. "
+summary: "This script makes your Launchpad MIDIcontroller interact with mAirlist.. Inspired by Thomas Kloppholzs' Launchpad Script. Changed for our current need."
 description: ""
 weight:
 slug: ""

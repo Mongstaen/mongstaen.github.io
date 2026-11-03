@@ -6,7 +6,7 @@ const t = useTranslations(lang);
 const base = stripLang(Astro.url.pathname);
 const other: Lang = lang === 'nb' ? 'en' : 'nb';
 ---
-<header>
+<header class="wrap">
   <a href={localizePath('/', lang)} class="name">Thomas Mongstad</a>
   <nav aria-label="Main">
     <a href={localizePath('/about/', lang)}>{t('nav.about')}</a>
