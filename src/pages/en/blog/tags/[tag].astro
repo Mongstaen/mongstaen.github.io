@@ -1,0 +1,16 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import PostList from '../../../../components/PostList.astro';
+import { localizePath, useTranslations } from '../../../../i18n/ui';
+import { allTags } from '../../../../lib/posts';
+export async function getStaticPaths() {
+  return (await allTags()).map(([tag, { name, posts }]) => ({ params: { tag }, props: { name, posts } }));
+}
+const { name, posts } = Astro.props;
+const t = useTranslations('en');
+---
+<Base lang="en" title={`${t('blog.tagged')} ${name}`}>
+  <h1>{t('blog.tagged')} {name}</h1>
+  <PostList lang="en" posts={posts} />
+  <p class="back"><a href={localizePath('/blog/', 'en')}>← {t('blog.back')}</a></p>
+</Base>

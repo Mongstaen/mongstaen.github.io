@@ -1,0 +1,15 @@
+---
+import type { Lang } from '../i18n/ui';
+import { postUrl, dateFormat, type Post } from '../lib/posts';
+interface Props { lang: Lang; posts: Post[] }
+const { lang, posts } = Astro.props;
+const fmt = dateFormat(lang);
+---
+<ul class="posts">
+  {posts.map((p) => (
+    <li>
+      <a href={postUrl(p)} hreflang={p.data.lang} lang={p.data.lang !== lang ? p.data.lang : undefined}>{p.data.title}</a>
+      <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time>
+    </li>
+  ))}
+</ul>

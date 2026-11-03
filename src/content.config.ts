@@ -9,6 +9,9 @@ const posts = defineCollection({
     date: z.coerce.date(),
     draft: z.boolean().optional(),
     summary: z.string().optional(),
+    description: z.string().optional(),
+    // Hugo files sometimes hold an empty `-` entry; drop those.
+    tags: z.array(z.string().nullable()).nullish().transform((t) => (t ?? []).filter((x): x is string => !!x?.trim())),
     lang: z.enum(['nb', 'en']).default('en'),
   }),
 });

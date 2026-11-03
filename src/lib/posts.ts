@@ -20,3 +20,20 @@ export function legacySlug(p: Post) {
 
 export const dateFormat = (lang: 'nb' | 'en') =>
   new Intl.DateTimeFormat(lang === 'nb' ? 'nb-NO' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+export const tagSlug = (tag: string) => tag.toLowerCase().trim().replace(/\s+/g, '-');
+
+/** All tags with their display name (first spelling seen) and posts. */
+export async function allTags() {
+  const map = new Map<string, { name: string; posts: Post[] }>();
+  for (const p of await latestPosts()) {
+    for (const tag of p.data.tags) {
+      const key = tagSlug(tag);
+      if (!map.has(key)) map.set(key, { name: tag, posts: [] });
+      map.get(key)!.posts.push(p);
+    }
+  }
+  return [...map.entries()].sort((a, b) => a[1].name.localeCompare(b[1].name));
+}
+
+export const postDescription = (p: Post) => p.data.description || p.data.summary || undefined;
